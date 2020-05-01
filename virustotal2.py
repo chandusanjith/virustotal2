@@ -254,7 +254,7 @@ class VirusTotal2(object):
         """
         report = []
 
-        if isinstance(result, basestring):
+        if isinstance(result, str):
             try:
                 obj = json.loads(result)
                 if isinstance(obj, dict):
@@ -327,7 +327,7 @@ class VirusTotal2(object):
         #we use basestring as the type to maintain unicode compliance in a python 2.x world
         #https://stackoverflow.com/questions/1979004/what-is-the-difference-between-isinstanceaaa-basestring-and-isinstanceaaa
 
-        if isinstance(thing,basestring) and os.path.isfile(thing):
+        if isinstance(thing,str) and os.path.isfile(thing):
             #thing==filename
             # TODO: Add check for
             if thing.endswith(".base64"):
@@ -336,7 +336,7 @@ class VirusTotal2(object):
               return "file_name"
 
         #implied failure case, thing is neither a list or a file, so we assume string
-        if not isinstance(thing, basestring):
+        if not isinstance(thing, str):
             return "unknown"
 
         # Test if thing parameter is a hash (32, 40, or 64 characters long)
