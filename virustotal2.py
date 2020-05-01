@@ -2,7 +2,7 @@
 import base64
 
 import threading
-from itertools import izip_longest
+from itertools import zip_longest
 import os
 import urlparse
 import re
