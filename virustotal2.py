@@ -4,7 +4,7 @@ import base64
 import threading
 from itertools import zip_longest
 import os
-import urlparse
+urllib.parse as urlparse
 import re
 import json
 import time
